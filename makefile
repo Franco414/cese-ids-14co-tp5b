@@ -10,6 +10,11 @@ all: build_folders $(OBJ_FILES)
 	@echo Building aplication
 	@gcc $(OBJ_FILES) -o $(BIN_DIR)/app.out
 
+.PHONY: doc
+doc:
+	@echo Building documentation
+	@doxygen
+
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo Compiling source file $(notdir $(basename $<))
 	@gcc -c $< -I$(INC_DIR) -o $@

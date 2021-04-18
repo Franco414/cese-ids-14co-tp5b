@@ -24,24 +24,29 @@
 /*=====[Definitions of external public global variables]=====================*/
 
 /*=====[Definitions of public global variables]==============================*/
-
+//! Constante que almacena los datos del alumno Esteban Volentini
 static const struct alumno_s ESTEBAN_VOLENTINI = {
     .apellidos = "VOLENTINI",
     .nombres = "Esteban Daniel",
     .documento = "23.517.968",
 };
-
+//! Constante que contiene los datos del alumno Geronimo Franco 
 static const struct alumno_s FRANCO_GERONIMO = {
     .apellidos = "GERONIMO",
     .nombres = "Franco Ezequiel",
     .documento = "39.399.713",
 };
-
+//! Constante que contiene una lista con todas las estructuras instanciadas de alumno_s.
 const alumno_t ALUMNOS[] = {
     &ESTEBAN_VOLENTINI,
     &FRANCO_GERONIMO,
 };
-
+//!Constante que tiene como valor entero el número de alumnos registrados.
+//!Para tal fin, utiliza la función sizeof, que sirve para obtener la 
+//!cantidad de bytes que ocupa una variable, estructura de datos.
+//!En este caso, para obtener la cantidad de alumnos se divide la cantidad
+//!de bytes que ocupa la constante ALUMNOS, entre la cantidad de bytes que se
+//!reservan para la estructura alumno_s.
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
